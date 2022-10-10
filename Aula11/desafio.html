@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio País</title>
+
+    <style>
+        #msg{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    Digite seu país de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="msg">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var pais = window.document.getElementById('txtpais')
+            var msg = window.document.getElementById('msg')
+
+            //msg.innerHTML = pais.value
+
+            if (pais.value == 'brasil' || pais.value == 'Brasil'){
+                msg.innerHTML = `<p>Você é Brasileiro</p>`
+            }
+            else{
+                msg.innerHTML = `<p>Você é estrangeiro</p>`
+            }
+               
+        }
+    </script>
+    
+</body>
+</html>
